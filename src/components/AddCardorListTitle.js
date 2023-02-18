@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import ClearIcon from "@material-ui/icons/Clear"
 import { MoreHoriz } from '@material-ui/icons'
 
-const AddCardorListTitle = () => {
+const AddCardorListTitle = ({type, setOpen}) => {
   const [title, setTitle]=useState("")
   const classes = useStyle();
   return (
@@ -11,15 +11,27 @@ const AddCardorListTitle = () => {
     <Paper className={classes.card}>
       <InputBase 
       multiline
-      value={title} onChange={e=>setTitle(e.target.value)}
-      placeholder="Enter a title for this card..."
+      value={title} 
+      onBlur={()=>setOpen(false)}
+      onChange={e=>setTitle(e.target.value)}
+      placeholder={
+        type === "card" ?
+        "Enter a title for this card..." :
+        "Enter list title..."
+      }
       inputProps = {{className: classes.input}}
       />
     </Paper>
     <div className={classes.confirm}>
       <div className={classes.options}>
-        <Button className={classes.btnConfirm}>Add card</Button>
-   <IconButton>
+        <Button className={classes.btnConfirm}>
+          {
+            type === "card" ? 
+            "Add card" :
+            "Add list"
+          }
+          </Button>
+   <IconButton onClick={()=> setOpen(false)}>
       <ClearIcon></ClearIcon>
       </IconButton>
       </div>
