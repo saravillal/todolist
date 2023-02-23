@@ -15,7 +15,6 @@ const AddCardorListTitle = ({type, setOpen, listId}) => {
     } else {
       addList(title)
     }
-    setTitle("")
     setOpen(false)
   }
 
@@ -25,7 +24,6 @@ const AddCardorListTitle = ({type, setOpen, listId}) => {
       <InputBase 
       multiline
       value={title} 
-      onBlur={()=>setOpen(false)}
       onChange={e=>setTitle(e.target.value)}
       placeholder={
         type === "card" ?
