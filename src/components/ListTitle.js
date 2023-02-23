@@ -1,23 +1,31 @@
 import { InputBase, makeStyles, Typography } from "@material-ui/core";
-import { useState } from "react";
+import { useContext, useState } from "react";
+import contextAPI from "../ContextAPI";
 
 const ListTitle = ({title, listId}) => {
   const classes = useStyle();
-  const[open, setOpen] = useState(true)
+  const[open, setOpen] = useState(false)
   const [newTitle, setNewTitle] = useState(title)
+  const {updateListTitle} = useContext(contextAPI)
+
+  const handleBlur = () => {
+    updateListTitle(newTitle, listId)
+    setOpen(false)
+  }
   return (
     <>
     { open ? (
       <InputBase
       value={newTitle}
       onChange={e=>setNewTitle(e.target.value)}
+      onBlur={handleBlur}
       autoFocus
       fullWidth
       inputProps={{className: classes.input}}
       />
     ) : (
     <div className={classes.title}>
-    <Typography className={classes.titleText}>
+    <Typography className={classes.titleText} onClick={()=>setOpen(true)}>
       {title}
     </Typography>
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-three-dots" viewBox="0 0 16 16">

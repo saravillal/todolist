@@ -13,7 +13,7 @@ const mockData = {
             {
                 id: "03card",
                 title: "Comprar pan"
-            },
+            }, 
         ]
 },
 "02list": {

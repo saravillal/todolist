@@ -1,11 +1,24 @@
 import { Button, fade, IconButton, InputBase, makeStyles, Paper } from '@material-ui/core'
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import ClearIcon from "@material-ui/icons/Clear"
 import { MoreHoriz } from '@material-ui/icons'
+import contextAPI from '../ContextAPI'
 
-const AddCardorListTitle = ({type, setOpen}) => {
+const AddCardorListTitle = ({type, setOpen, listId}) => {
   const [title, setTitle]=useState("")
   const classes = useStyle();
+  const {addCard, addList} = useContext(contextAPI)
+
+  const handleAddCardorList = () => {
+    if (type === "card") {
+      addCard(title, listId)
+    } else {
+      addList(title)
+    }
+    setTitle("")
+    setOpen(false)
+  }
+
   return (
     <>
     <Paper className={classes.card}>
@@ -24,10 +37,10 @@ const AddCardorListTitle = ({type, setOpen}) => {
     </Paper>
     <div className={classes.confirm}>
       <div className={classes.options}>
-        <Button className={classes.btnConfirm}>
+        <Button className={classes.btnConfirm} 
+        onClick={handleAddCardorList}>
           {
-            type === "card" ? 
-            "Add card" :
+            type === "card" ? "Add card" :
             "Add list"
           }
           </Button>
