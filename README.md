@@ -1,3 +1,29 @@
+<em> # Trello App </em>
+
+Funcionalidades
+✔️ Funcionalidade 1: Realizar cadastro dos usuários, podendo ser paciente ou profissional de saúde.
+
+✔️ Funcionalidade 2: Armazenar dados do usuário, como glicemia, atividade física, alimentação, medicação, administração de insulina e peso no banco de dados na Cloud Firestore.
+
+✔️ Funcionalidade 3: Plotar gráfico com histórico dos níveis glicêmicos do paciente.
+
+✔️ Funcionalidade 4: Chat com entre o paciente e profissional da saúde.
+
+Desde producto nos piden crear un la parte visual o frontend para una aplicación de
+gestión de tareas propias tipo Trello. Se trataría de una revisión más básica de la
+popular aplicación.
+
+Las funcionalidades que el usuario deberá ser capaz de realizar serán crear
+listas y las consiguientes tareas internas de cada lista, además de poder
+desplazar tareas entre listas.
+
+Nuestro CLON DE TRELLO te permitirá: 
+* Renombrar las listas 
+* Cambiar las listas de lugar (drag and drop) 
+* Cambiar las tareas de orden o de lista utilizando también el drag and drop 
+* Crear nuevas listas
+* Añadir tareas a cualquiera de las listas
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

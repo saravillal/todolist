@@ -2,23 +2,23 @@ const mockData = {
     lists: {
         "01list": {
             id: "01list",
-            title: "Edita el título de tu lista",
+            title: "Edit your list title",
             cards: [{
                 id: "01card",
-                title: "Comprar lechuga"
+                title: "Check the email"
             }, {
                 id: "02card",
-                title: "Comprar tomates"
+                title: "Do the washing"
             },
             {
                 id: "03card",
-                title: "Comprar pan"
+                title: "Take a shower"
             }, 
         ]
 },
 "02list": {
     id: "02list",
-    title: "Edita el título de tu lista",
+    title: "Edit your list title",
     cards: []
 }
 },
