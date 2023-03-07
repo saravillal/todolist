@@ -10,6 +10,8 @@ Nuestra APP de tareas te permitirá:
 * Añadir tareas a cualquiera de las listas
 
 
+
+
 **Vista general**
 
 ------------
@@ -39,7 +41,7 @@ Nuestra APP de tareas te permitirá:
 
 [![](https://i.ibb.co/0XsMYjX/3.png)](https://i.ibb.co/0XsMYjX/3.png)
 
-**Mover tarea**
+**Desplazar tarea**
 
 ------------
 
@@ -47,7 +49,7 @@ Nuestra APP de tareas te permitirá:
 
 [![](https://i.ibb.co/tB79F5r/4.png)](https://i.ibb.co/tB79F5r/4.png)
 
-**Mover lista**
+**Desplazar lista**
 
 ------------
 
