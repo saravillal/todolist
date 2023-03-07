@@ -10,7 +10,7 @@ Nuestra APP de tareas te permitirá:
 * Añadir tareas a cualquiera de las listas
 
 
-
+------------
 
 **Vista general**
 
